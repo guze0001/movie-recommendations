@@ -207,16 +207,14 @@ main h2 {}
 }
 
 .movie-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     text-shadow: 3px 3px 3px #ddd;
 }
 
 .movie-date {
     font-size: 0.5rem;
-    position: relative;
-    right: 1rem;
-    margin-left: 2rem;
+    
 }
 
 .move {
@@ -225,11 +223,11 @@ main h2 {}
 }
 
 .movie-desc {
-    font-size: 1rem;
+    font-size: .8rem;
     color: #999;
     padding-left: .5rem;
     text-indent: 1rem;
-
+margin-bottom: .5rem;
 
 }
 
@@ -238,10 +236,10 @@ main h2 {}
 **************************************/
 
 #recommend-summary {
-    float: left;
-    width: 100%;
+       float: left;
+    width: 95%;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 0.7rem;
 }
 
 #close-button {

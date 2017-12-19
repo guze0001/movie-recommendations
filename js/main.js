@@ -115,9 +115,9 @@ const app = {
                 h2.textContent = movie.title;
                 h2.classList.add('movie-title');
 
-                let span = document.createElement('span');
+                let span = document.createElement('div');
                 span.textContent = "Date: " + movie.release_date 
-                    let span2 = document.createElement('span');
+                    let span2 = document.createElement('div');
                 span2.textContent = "Average: " + movie.vote_average ;//+ " Votes: " + movie.vote_count;
                 
                 span.classList.add('movie-date');
