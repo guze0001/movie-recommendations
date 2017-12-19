@@ -1,0 +1,267 @@
+/*************************************
+                DEFAULTS
+**************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Bitter|Source+Sans+Pro');
+body,
+p,
+h1,
+h2 {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+
+}
+
+body {}
+
+#loader {
+    top: 5rem;
+    position: absolute;
+    left: 45%;
+    /*    display: none;*/
+    transform: scale(0);
+}
+
+#loader.active {
+    /*    display: block;*/
+    transform: scale(2);
+    transition: transform 1s ease-in-out;
+    z-index: 200;
+}
+
+h1 {}
+
+h2 {
+    color: #555;
+    padding: .5rem;
+    font-family: Bitter, 'Book Antiqua', Palatino, serif;
+}
+
+p {}
+
+/*************************************
+                LAYOUT
+**************************************/
+
+main {
+    vertical-align: top;
+}
+
+main h1 {}
+
+main h2 {}
+
+.page {
+    /*    display: none;*/
+    padding: 1rem;
+    margin: 3.5rem .2rem;
+    transform: translateX(-200%);
+    transition: transform 1s;
+    top: 1rem;
+    position: absolute;
+    box-shadow: 4px 4px 3px #ccc;
+    border: 1px solid #ccc;
+    background-color: #fefefe;
+    ;
+}
+
+
+.page.active {
+    transform: translateX(0);
+    transition: transform 0, 5s;
+    float: left;
+    margin-bottom: 3rem;
+    padding-bottom: 5.5rem;
+
+
+}
+
+.not {
+    display: none;
+}
+
+.attribution {
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 99%;
+    background-color: #fefefe;
+    border: 1px solid #ccc;
+    ;
+
+}
+
+.attribution img {
+    width: 60%;
+    animation-iteration-count: infinite;
+    animation-name: spin;
+    animation-direction: alternate;
+    animation-duration: 1s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(3deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/*************************************
+                SEARCH BAR
+**************************************/
+
+.search {
+    position: fixed;
+    height: 3rem;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 2px 2px #000;
+    /*    padding: 0.5rem;*/
+}
+
+.search.home {
+    top: 10rem;
+}
+
+.home-title {
+    text-align: center;
+    margin-top: 5rem;
+    transform: translateY(0);
+}
+
+.home-title.search {
+    transform: translateY(-500%);
+    transition: transform .5s;
+}
+
+#search-button {
+    width: 3rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 120;
+    cursor: pointer;
+    /*    background-color: #dedede;*/
+    padding-top: 0.35rem;
+
+}
+
+#search-input {
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    border: 1px solid #dedede;
+}
+
+/*************************************
+                SEARCH RESULTS
+**************************************/
+
+.movie {
+    border: 1px solid #bbb;
+    padding: 1px;
+    overflow: auto;
+    clear: both;
+    /*    transform: translateX(-200%);*/
+    margin-bottom: 1rem;
+    box-shadow: 5px 5px 5px #ddd;
+    /*    height: 0;*/
+    cursor: pointer;
+}
+
+.poster {
+    float: left;
+    width: 150px;
+    height: 8rem;
+    min-height: 150px;
+    margin: .8rem 1rem 0.8rem 0.5rem;
+    box-shadow: 3px 4px 4px;
+}
+
+.movie-title {
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 3px 3px 3px #ddd;
+}
+
+.movie-date {
+    font-size: 0.5rem;
+    position: relative;
+    right: 1rem;
+    margin-left: 2rem;
+}
+
+.move {
+
+    /*    height: 100%;*/
+}
+
+.movie-desc {
+    font-size: 1rem;
+    color: #999;
+    padding-left: .5rem;
+    text-indent: 1rem;
+
+
+}
+
+/*************************************
+                RECOMMENDATIONS
+**************************************/
+
+#recommend-summary {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#close-button {
+    position: absolute;
+    right: .3rem;
+    top: .4rem;
+    float: right;
+    cursor: pointer;
+}
+
+#movie-name {
+    color: #245533;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.title {
+    /*    float: left;*/
+    width: 100%;
+}

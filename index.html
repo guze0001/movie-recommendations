@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendations</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+    <main>
+
+        <!-- header always will be on the screen-->
+        <header class="search home">
+
+            <img id="search-button" class="iconic iconic-md" data-src="./img/magnifying-glass-sm.svg" alt="Search" title="Search" />
+            <input type="text" id="search-input" placeholder="search" />
+        </header>
+        <div class="home-title">
+            <h1>MOVIE</h1>
+            <h2>Recommendations</h2>
+        </div>
+        <div id="loader">
+            <img id="loader-img" class="iconic iconic-md" data-src="./img/reload.svg"> loading...
+        </div>
+        <div class="page" id="search-results">
+            <section class="title">
+                <p id="result-summary" class="hidden">You have got <span id="result-count"></span> results</p>
+
+            </section>
+            <section class="content">
+                <div class="movie">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w185/l1yltvzILaZcx2jYvc5sEMkM7Eh.jpg">
+                    <h2 class="movie-title">JAWS</h2>
+                    <p class="movie-desc">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="page" id="recommend-results">
+            <section class="title">
+                <p id="recommend-summary" class="hidden">There are <span id="recommend-count"></span> recommendations based on
+                    <div id='movie-name'></div>
+                </p>
+                <img id="close-button" class="iconic iconic-md" data-src="./img/x.svg" alt="Search" title="Close" />
+            </section>
+            <section class="content">
+                <div class="movie">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w185/l1yltvzILaZcx2jYvc5sEMkM7Eh.jpg">
+                    <h2 class="movie-title">JAWS</h2>
+                    <p class="movie-desc">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="loading not">
+        <img class="iconic" data-src="./img/loop-circular.svg" title="loop circular" />
+    </div>
+
+    <div class="attribution">
+        <img src="./img/powered-by-rectangle-blue.svg" alt="The Movie DB" />
+    </div>
+
+    <script src="./js/iconic.min.js"></script>
+    <script src="./js/key.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
