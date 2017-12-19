@@ -143,16 +143,14 @@ const app = {
                 div.appendChild(p);
                 div.addEventListener('click', app.getRecommended);
 
-                setTimeout(function () {
-                    div.classList.add('move');
-                }, (index + 1) * 200);
+              
                 df.appendChild(div);
 
 
             }
         );
         container.appendChild(df);
-
+        window.scrollTo(0, 0);
     },
     showMovieCount: function (movies) {
 
@@ -164,7 +162,7 @@ const app = {
     },
     getRecommended: function (ev) {
         let movieId = ev.currentTarget.getAttribute('data-movie');
-        let movieName = ev.currentTarget.parentElement.firstElementChild.querySelector('h2').textContent;
+        let movieName = ev.currentTarget.querySelector('h2').textContent;
         let page = 1;
         let url = app.baseURL + 'movie/' + movieId + '/recommendations?api_key=' + APIKEY + '&page=' + page;
         //url = `${app.baseURL}search/movie?api_key${APIKEY}&query=${input.value}`;
@@ -190,11 +188,14 @@ const app = {
         let resultSummary = document.getElementById('recommend-summary');
         resultSummary.classList.add('visible');
         let movieNameContainer = document.getElementById('movie-name');
-        movieNameContainer.textContent = movieName;
+          setTimeout(function () {
+                    movieNameContainer.textContent = movieName;
+                }, 200);
+        
 
 
         app.generateMovieHTML(movies, content);
-
+        
     },
     togglePages(active, passive) {
         active.classList.add('active');
